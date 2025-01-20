@@ -1,0 +1,43 @@
+//Zadanie1
+//a)
+x = 5/12;
+arctg_result = atan(x);
+disp("Wynik arctg(5/12): " + string(arctg_result));
+//b)
+A = [3 -2 3; -2 3 8; 6 4 0];
+det_A = det(A);
+disp("Wyznacznik A: " + string(det_A));
+//c)
+epsilon = 0.25;
+Rz = 34;
+Rw = 23.34;
+I = epsilon / (Rz + Rw);
+disp("Wynik I: " + string(I));
+//d)
+suma = 0;
+for n = 5:50
+    suma = suma + (n + 7) / (n^3 + 2);
+end
+disp("Wynik sumy: " + string(suma));
+//Zadanie2
+x = 2:0.01:6;
+f1 = log2(x);
+f2 = 2*x.^2 - 3*x + 1 ./ x;
+
+clf;
+plot(x, f1, 'r', "LineWidth", 2); // f = log2(x), kolor czerwony
+plot(x, f2, 'b', "LineWidth", 2); // f = 2x^2 - 3x + 1/x, kolor niebieski
+legend(["f = log2(x)", "f = 2x^2 - 3x + 1/x"]);
+title("Wykres funkcji");
+xlabel("x");
+ylabel("f(x)");
+Zadanie3
+labels = ["2010"; "2012"; "2024"];
+przychod = [42332, 23243, 33244];
+koszty = [2323, 2332, 3212];
+zyski = [3233, 4323, 5986];
+
+clf;
+bar([przychod; koszty; zyski]');
+legend(["Przychód", "Koszty", "Zyski"]);
+xtitle("Wykres słupkowy pogrupowany", "Rok", "Wartość");
